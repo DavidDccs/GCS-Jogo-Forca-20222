@@ -20,6 +20,7 @@ public class JogoForca {
         Random r = new Random();
         int indicePalavraSorteada = r.nextInt(bancoPalavras.length);
         int chancesRestantes = 10;
+        int acertos=0;
         String palavraSorteada = bancoPalavras[indicePalavraSorteada];
         int tamPalavraSorteada = palavraSorteada.length();
         char[] letrasEscondidas = palavraSorteada.toCharArray();
@@ -50,6 +51,7 @@ public class JogoForca {
                 if (letrasEscondidas[i] == letraDigitada) {
                     letraEncontrada = true;
                     letrasReveladas[i] = letrasEscondidas[i];
+                    acertos++;
                 }
             }
 
@@ -57,6 +59,7 @@ public class JogoForca {
             if (!letraEncontrada) {
                 chancesRestantes--;
             }
+            if(acertos ==tamPalavraSorteada){System.out.println("Voce ganhou!"); System.exit(0);}
         }
 
         System.out.println("===========");
