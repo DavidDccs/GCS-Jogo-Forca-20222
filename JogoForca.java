@@ -1,5 +1,8 @@
 import java.util.Random;
 import java.util.Scanner;
+
+import static java.lang.Character.toUpperCase;
+
 public class JogoForca {
     public static void main (String[] args) {
         System.out.println("===============");
@@ -44,6 +47,7 @@ public class JogoForca {
             System.out.print("Letra: ");
             String strLetraDigitada = in.nextLine();
             char letraDigitada = strLetraDigitada.charAt(0);
+            letraDigitada = toUpperCase(letraDigitada);
 
             // Revela letras, se existirem.
             boolean letraEncontrada = false;
