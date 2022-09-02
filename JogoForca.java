@@ -1,5 +1,5 @@
+import java.util.Random;
 import java.util.Scanner;
-
 public class JogoForca {
     public static void main (String[] args) {
         System.out.println("===============");
@@ -17,8 +17,8 @@ public class JogoForca {
                 "BANANA",
                 "PESSEGO",
         };
-
-        int indicePalavraSorteada = 2;
+        Random r = new Random();
+        int indicePalavraSorteada = r.nextInt(bancoPalavras.length);
         int chancesRestantes = 10;
         String palavraSorteada = bancoPalavras[indicePalavraSorteada];
         int tamPalavraSorteada = palavraSorteada.length();
